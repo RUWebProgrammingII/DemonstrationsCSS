@@ -1,0 +1,51 @@
+/*
+    Colors:
+        Light pink: #efc3f5
+        Dark pink: #faa6ff
+        Light purple: #7353ba
+        Dark purple: #2f195f
+        Blackish blue: #0f1020
+
+    Sizes:
+        Images:
+            Logo size: 250px
+            She-Ra size: 200px (D), 150px (M)
+            Hordak size: 300px (D), 200px (T), 150px (M)
+            Shift-Wind size: 150px
+            He-Man size: 100px
+            Bow size: 100px
+        Padding:
+            Left-aside: 20px 0 (D), 40px (M)
+            Hordak: 20px 40px (D), 0 30px (T & M)
+            Ally: 20px 40px (D), 20px (T)
+        Column size:
+            Body: 200px auto (D)
+            Odd child ally: 200px auto (D)
+            Even child ally: auto 200px (D)
+            Navigation bar: 90% 10% (T)
+            Ally first child: 200px auto (T)
+            Hordak: 1fr 2fr (T), 1fr 3fr (M)
+            Left aside: 1fr 1fr (M)
+        Row size:
+            Main: 150px auto (D), 150px 250px auto (T), 200px 250px auto (M)
+
+*/
+
+/* General */
+
+/* General ends here */
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+
+}
+
+/* Tablet */
+@media screen and (min-width: 480px) and (max-width: 1024px) {
+
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+
+}
