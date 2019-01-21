@@ -1,0 +1,69 @@
+.item {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    border: dashed 1px rgba(155, 155, 155, .8);
+}
+
+/* Perspective */
+.perspective-container {
+    width: 768px;
+    perspective: 500px;
+    perspective-origin: 50% 50%;
+    margin: 0 auto;
+}
+
+.perspective-container .perspective-item {
+    transform: rotateX(35deg) rotateY(25deg);
+}
+
+/* Transforms */
+#my-div {
+    transform: rotateZ(30deg) translateX(200px);
+}
+
+/* Rounded corners */
+
+/* Box-sizing */
+
+/* Background-sizing */
+
+/* Selectors */
+a {
+    display: block;
+}
+
+.selector-container {
+    font-size: 1.1em;
+}
+
+.selector-container a[href$="pdf"]:before {
+    font-family: 'FontAwesome';
+    content: '\f1c1';
+}
+
+.selector-container a[href*="facebook"]:before {
+    font-family: 'FontAwesome';
+    content: '\f09a';
+}
+
+.selector-container a[href^="mailto"]:before {
+    font-family: 'FontAwesome';
+    content: '\f003';
+}
+
+.selector-container div[data-content]:after {
+    content: attr(data-content);
+}
+
+.selector-container p:nth-child(even) {
+    background-color: yellow;
+}
+
+.selector-container div:nth-child(odd) {
+    color: red;
+}
+
+.selector-container :last-child {
+    font-weight: bold;
+}

@@ -1,0 +1,151 @@
+/* Media queries */
+* { box-sizing: border-box; }
+
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100px;
+    padding: 20px;
+    background-color: rgba(155, 155, 155, .5);
+    border-bottom: solid 5px rgba(155, 155, 155, .8);
+}
+
+.fa-bars {
+    font-size: 1.5em;
+    display: none;
+}
+
+@media screen and (max-width: 500px) {
+    .fa-bars {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 500px) and (orientation: portrait) {
+    .fa-bars {
+        font-size: .5em;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 1024px) {
+    .fa-bars {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+}
+
+@media print {
+    nav {
+        display: none;
+    }
+}
+
+/* Animations */
+.container {
+    width: 768px;
+    margin: 0 auto;
+    margin-top: 200px;
+}
+
+@keyframes yellow-to-blue {
+    from { background-color: yellow; }
+    to { background-color: blue; }
+}
+
+@keyframes yellow-red-blue-purple {
+    0% { background-color: yellow; }
+    33.3% { background-color: red; }
+    66.6% { background-color: blue; }
+    100% { background-color: purple; }
+}
+
+@keyframes increase-font-size {
+    from { font-size: 24px; }
+    to { font-size: 16px; }
+}
+
+#divOne {
+    height: 100px;
+    width: 100px;
+    animation-name: yellow-to-blue;
+    animation-duration: 4s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+
+#divTwo {
+    height: 100px;
+    width: 100px;
+    animation-name: yellow-red-blue-purple;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 2;
+    animation-timing-function: linear;
+}
+
+#paragraph {
+    display: none;
+    animation-name: increase-font-size;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/* Gradients */
+#linearGradient {
+    margin-top: 100px;
+    width: 100px;
+    height: 100px;
+    background-image: linear-gradient(30deg, pink, pink 10px, blue 10px, blue 50px, lime 50px, lime 80px, purple);
+}
+
+#stackedGradient {
+    margin-top: 100px;
+    width: 100px;
+    height: 100px;
+    background-image: /* Top */ linear-gradient(rgba(66, 244, 167, .4), rgba(244, 65, 238, .4)),
+                      /* Second-top */ linear-gradient(to bottom right, yellow, yellow 10px, black 10px, black 20px, yellow 20px, yellow 30px, black 30px, black 40px, white, white 60px, yellow 60px, yellow 70px, black 70px, black 80px, yellow 80px, yellow 90px, black 90px, black);
+}
+
+#radialGradient {
+    height: 200px;
+    width: 200px;
+    margin-top: 100px;
+    background-image: radial-gradient(orange, red, blue 50px, blue 60px, brown 60px, brown 80px, black 80px, black);
+}
+
+#stackedRadialGradient {
+    height: 100px;
+    width: 100px;
+    margin-top: 50px;
+    background-image: /* Top */ radial-gradient(rgba(66, 134, 244, 0.6), rgba(244, 172, 65, 0.6)),
+                      /* Second-top */ radial-gradient(blue, blue 10px, green 10px, green 20px);
+}
+
+/* Drop shadows */
+#myDropShadow {
+    height: 100px;
+    width: 100px;
+    margin-bottom: 100px;
+    border-radius: 50%;
+    box-shadow: 200px 0px 0px 10px black,
+                400px 0px 0px 50px black;
+}
+
+/* Transitions */
+#myTransitionButton {
+    transition: all 1s;
+    margin-bottom: 50px;
+}
+
+#myTransitionButton:hover {
+    padding: 20px;
+    background-color: green;
+    font-size: 1.1em;
+}
