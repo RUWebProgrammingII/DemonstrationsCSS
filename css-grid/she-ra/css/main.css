@@ -32,6 +32,19 @@
 */
 
 /* General */
+main .allies .ally:first-child img {
+    width: 150px;
+}
+main .allies .ally:not(:first-child) img {
+    width: 100px;
+}
+
+main .allies .ally:nth-child(even) {
+    background-color: #efc3f5;
+}
+main .allies .ally:nth-child(odd) {
+    background-color: #faa6ff;
+}
 
 /* General ends here */
 
@@ -42,10 +55,126 @@
 
 /* Tablet */
 @media screen and (min-width: 480px) and (max-width: 1024px) {
-
+    .left-aside {
+        display: none;
+    }
+    main {
+        display: grid;
+        grid-template-rows: 150px 250px auto;
+    }
+    main .hordak img {
+        width: 200px;
+    }
+    main .navigation-bar {
+        display: grid;
+        justify-items: center;
+        align-content: center;
+        background-color: #7353ba;
+        border-bottom: solid 5px #2f195f;
+    }
+    main .hordak {
+        display: grid;
+        font-size: 1.2em;
+        justify-items: center;
+        align-content: center;
+        background-color: #0f1020;
+        color: white;
+        grid-template-columns: 1fr 2fr;
+    }
+    main .allies {
+        display: grid;
+        grid-template-areas:
+            "shift-wind shift-wind"
+            "he-man bow";
+    }
+    main .allies .ally:nth-child(1) {
+        grid-area: shift-wind;
+    }
+    main .allies .ally:nth-child(2) {
+        grid-area: he-man;
+    }
+    main .allies .ally:nth-child(3) {
+        grid-area: bow;
+    }
 }
 
 /* Desktop */
 @media screen and (min-width: 1024px) {
-
+    body {
+        display: grid;
+        grid-template-columns: 200px auto;
+        grid-template-rows: 1fr;
+    }
+    .left-aside {
+        display: grid;
+        background-color: #efc3f5;
+        border-right: solid 5px #faa6ff;
+        padding: 20px 0;
+        font-size: 1.8em;
+    }
+    .left-aside img {
+        width: 200px;
+        align-self: flex-end;
+    }
+    body main {
+        display: grid;
+        grid-template-rows: 150px auto;
+        grid-template-areas:
+            "navigation navigation navigation"
+            "hordak allies allies";
+    }
+    main .navigation-bar {
+        display: grid;
+        grid-area: navigation;
+        justify-items: center;
+        align-content: center;
+        background-color: #7353ba;
+        border-bottom: solid 5px #2f195f;
+    }
+    main .navigation-bar img {
+        width: 250px;
+    }
+    main .navigation-bar .menu-icon {
+        display: none;
+    }
+    main .hordak {
+        display: grid;
+        grid-area: hordak;
+        background-color: #0f1020;
+        color: white;
+        font-size: 1.8em;
+        padding: 20px 40px;
+        justify-items: center;
+        align-items: flex-start;
+    }
+    main .allies {
+        display: grid;
+        grid-area: allies;
+        grid-template-rows: auto auto auto;
+    }
+    main .allies .ally {
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        padding: 20px 40px;
+    }
+    main .allies .ally img {
+        grid-area: ally-img;
+    }
+    main .allies .ally p {
+        grid-area: ally-paragraph;
+    }
+    main .allies .ally:nth-child(even) {
+        background-color: #efc3f5;
+        grid-template-areas:
+            "ally-paragraph ally-img";
+    }
+    main .allies .ally:nth-child(odd) {
+        background-color: #faa6ff;
+        grid-template-areas:
+            "ally-img ally-paragraph";
+    }
+    main .hordak img {
+        width: 300px;
+    }
 }
